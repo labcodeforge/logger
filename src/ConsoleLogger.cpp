@@ -1,27 +1,27 @@
-#include "Logger.h"
+#include "ConsoleLogger.h"
 #include <iostream>
 
-Logger Logger::instance;
+ConsoleLogger ConsoleLogger::instance;
 
-void Logger::info(const std::string & message) {
+void ConsoleLogger::info(const std::string & message) {
     std::cout << "INFO: " << message << std::endl;
 }
-void Logger::error(const std::string & message) {
+void ConsoleLogger::error(const std::string & message) {
     std::cout << "INFO: " << message << std::endl;
 }
-void Logger::debug(const std::string & message) {
+void ConsoleLogger::debug(const std::string & message) {
     std::cout << "Debug: " << message << std::endl;
 }
-void Logger::warning(const std::string & message) {
+void ConsoleLogger::warning(const std::string & message) {
     std::cout << "Warning: " << message << std::endl;
 }
-void Logger::fatal(const std::string & message) {
+void ConsoleLogger::fatal(const std::string & message) {
     std::cout << "Fatal: " << message << std::endl;
 }
 
-Logger::Logger() {
+ConsoleLogger::ConsoleLogger() {
 
 }
-Logger::~Logger() {
+ConsoleLogger::~ConsoleLogger() {
 
 }

@@ -1,7 +1,7 @@
-#ifndef LOGGER_H__
-#define LOGGER_H__
+#ifndef CONSOLE_LOGGER_H__
+#define CONSOLE_LOGGER_H__
 #include <string>
-class Logger {
+class ConsoleLogger {
 
 public:
     void info(const std::string & message);
@@ -10,17 +10,17 @@ public:
     void warning(const std::string & message);
     void fatal(const std::string & message);
 
-    static Logger& getInstance() {
+    static ConsoleLogger& getInstance() {
         return instance;
     }
 private:
-    Logger();
-    ~Logger();
-    Logger(const Logger&) = delete;
-    Logger& operator=(const Logger&) = delete;
-    Logger(Logger&&) = delete;
-    Logger& operator=(Logger&&) = delete;
-    static Logger instance;
+    ConsoleLogger();
+    ~ConsoleLogger();
+    ConsoleLogger(const ConsoleLogger&) = delete;
+    ConsoleLogger& operator=(const ConsoleLogger&) = delete;
+    ConsoleLogger(ConsoleLogger&&) = delete;
+    ConsoleLogger& operator=(ConsoleLogger&&) = delete;
+    static ConsoleLogger instance;
 
 };
 
